@@ -16,5 +16,6 @@ def ajuda(request):
 def local(request):
     return render(request,'local.html')
 
-
+def exibiritem(request,id):
+    return render(request,'exibiritem.html',{'id':id})
 
