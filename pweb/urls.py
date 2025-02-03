@@ -28,7 +28,7 @@ urlpatterns = [
     
     path('exibiritem/<int:id>', views.exibiritem,name='exibiritem'),
     
-    path('perfil/<str:limajota>/', views.perfil, name='perfil'),
+    path('perfil/', views.perfil, name='perfil'),
     
     
 ]
