@@ -31,6 +31,7 @@ urlpatterns = [
     path('perfil/<str:usuario>/', views.perfil, name='perfil'),
     
     path('dados/', views.dados,name='dados'),
+    path('form/', views.form,name='form'),
     
     
     
