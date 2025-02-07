@@ -13,6 +13,7 @@
           <th scope="col">ID</th>
           <th scope="col">Matricula</th>          
           <th scope="col">Nome</th>
+          <th scope="col">Data de nascimento</th>
           <th scope="col">Curso</th>
           <th scope="col">Turma</th>          
           <th scope="col">Ações</th>  
@@ -23,6 +24,7 @@
       <tr>
           <td>{{ forloop.counter0 }}</td>
           <td>{{item.nome}}</td>
+          <td> {{item.data}} </td>
           <td> {{item.matricula}} </td>
           <td> {{item.curso}} </td>
           <td> {{item.turma}} </td>          

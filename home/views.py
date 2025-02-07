@@ -2,9 +2,9 @@
 from django.shortcuts import render, HttpResponse
 
 LISTA_ALUNOS = [
-    {"nome": "João Silva", "matricula": "202301", "curso": "Técnico em Informática", "turma": "208"},
-    {"nome": "Maria Oliveira", "matricula": "202302", "curso": "Técnico em Informática", "turma": "208"},
-    {"nome": "Carlos Souza", "matricula": "202303", "curso": "Técnico em Informática", "turma": "208"},
+    {"nome": "João Silva", "matricula": "202301","data": "03/10/2009","curso": "Técnico em Informática", "turma": "208"},
+    {"nome": "Maria Oliveira", "matricula": "202302","data": "05/02/2008", "curso": "Técnico em Informática", "turma": "208"},
+    {"nome": "Carlos Souza", "matricula": "202303","data": "20/12/2009", "curso": "Técnico em Informática", "turma": "208"},
 ]
 
 def index(request):
