@@ -1,6 +1,12 @@
 # Create your views here.
 from django.shortcuts import render, HttpResponse
 
+LISTA_ALUNOS = [
+    {"nome": "João Silva", "matricula": "202301", "curso": "Técnico em Informática", "turma": "208"},
+    {"nome": "Maria Oliveira", "matricula": "202302", "curso": "Técnico em Informática", "turma": "208"},
+    {"nome": "Carlos Souza", "matricula": "202303", "curso": "Técnico em Informática", "turma": "208"},
+]
+
 def index(request):
     return render(request,'index.html')
 
@@ -45,5 +51,11 @@ def form(request):
         return render(request,'dados.html',context)
     else: # method GET, mostra o formulário vazio
         return render(request,'form.html')
+def listar_alunos(request):
+    context = {
+        'lista': LISTA_ALUNOS,
+    }
+    return render(request, 'listar_alunos.html', context) 
+
 
 
