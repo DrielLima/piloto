@@ -80,6 +80,29 @@ def editar_aluno(request, indice):
     }
     return render(request, 'form_aluno.html', context)
 
+def cadastrar_aluno(request):
+    if request.method == "POST":
+        nome = request.POST.get("nome")
+        matricula = request.POST.get("matricula")
+        curso = request.POST.get("curso")
+        turma = request.POST.get("turma")
+
+
+        novo_aluno = {
+            "nome": nome,
+            "matricula": matricula,
+            "curso": curso,
+            "turma": turma
+        }
+        LISTA_ALUNOS.append(novo_aluno)  # Adiciona o novo aluno à lista
+
+
+        return redirect('listar_alunos')  # Redireciona para a lista de alunos
+
+
+    return render(request, 'form_aluno.html')  # Exibe o formulário vazio
+
+
 
 
 
