@@ -57,5 +57,31 @@ def listar_alunos(request):
     }
     return render(request, 'listar_alunos.html', context) 
 
+from django.shortcuts import redirect
+
+def editar_aluno(request, indice):
+    aluno = LISTA_ALUNOS[indice]  # Obtém a referência do aluno na lista
+
+
+    if request.method == "POST":
+        # Atualiza diretamente os valores do dicionário aluno
+        aluno['nome'] = request.POST.get("nome")
+        aluno['matricula'] = request.POST.get("matricula")
+        aluno['curso'] = request.POST.get("curso")
+        aluno['turma'] = request.POST.get("turma")
+
+
+        return redirect('listar_alunos')  # Redireciona para a lista de alunos
+
+
+    context = {
+        'aluno': aluno,
+        'indice': indice
+    }
+    return render(request, 'form_aluno.html', context)
+
+
+
+
 
 
