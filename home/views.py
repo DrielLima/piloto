@@ -100,7 +100,7 @@ def cadastrar_aluno(request):
         return redirect('listar_alunos')  # Redireciona para a lista de alunos
 
 
-    return render(request, 'form_aluno.html')  # Exibe o formulário vazio
+    return render(request, 'from_aluno.html')  # Exibe o formulário vazio
 
 
 
