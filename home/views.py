@@ -97,7 +97,7 @@ def cadastrar_aluno(request):
         LISTA_ALUNOS.append(novo_aluno)  # Adiciona o novo aluno à lista
 
 
-        return redirect('listar_alunos')  # Redireciona para a lista de alunos
+        return redirect('listar_alunos.html')  # Redireciona para a lista de alunos
 
 
     return render(request, 'from_aluno.html')  # Exibe o formulário vazio
