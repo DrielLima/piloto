@@ -78,7 +78,7 @@ def editar_aluno(request, indice):
         'aluno': aluno,
         'indice': indice
     }
-    return render(request, 'form_aluno.html', context)
+    return render(request, 'from_aluno.html', context)
 
 def cadastrar_aluno(request):
     if request.method == "POST":
